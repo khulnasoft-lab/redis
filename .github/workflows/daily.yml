@@ -900,7 +900,7 @@ jobs:
       run: make REDIS_CFLAGS='-Werror -DREDIS_TEST'
 
   test-freebsd:
-    runs-on: macos-12
+    runs-on: macos-13
     if: |
       (github.event_name == 'workflow_dispatch' || (github.event_name != 'workflow_dispatch' && github.repository == 'khulnasoft-lab/redis')) &&
       !contains(github.event.inputs.skipjobs, 'freebsd')
